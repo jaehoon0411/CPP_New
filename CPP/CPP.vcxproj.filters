@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Parts\Part01.cpp">
+      <Filter>Part01</Filter>
+    </ClCompile>
+    <ClCompile Include="Parts\Part02.cpp">
+      <Filter>Part02</Filter>
+    </ClCompile>
+    <ClCompile Include="Parts\Part03.cpp">
+      <Filter>Part03</Filter>
+    </ClCompile>
+    <ClCompile Include="Parts\Part04.cpp">
+      <Filter>Part04</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Parts\Part01.h">
+      <Filter>Part01</Filter>
+    </ClInclude>
+    <ClInclude Include="Parts\PartList.h" />
+    <ClInclude Include="Parts\Part02.h">
+      <Filter>Part02</Filter>
+    </ClInclude>
+    <ClInclude Include="Parts\Part03.h">
+      <Filter>Part03</Filter>
+    </ClInclude>
+    <ClInclude Include="Parts\Part04.h">
+      <Filter>Part04</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Part01">
+      <UniqueIdentifier>{97a621f5-81ed-4685-9d36-a4d3786f7baa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Part02">
+      <UniqueIdentifier>{9de82b3f-e39c-47ca-8fd3-100d59b5c0c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Part03">
+      <UniqueIdentifier>{7eb48ce7-270d-4609-987a-eef548d72e9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Part04">
+      <UniqueIdentifier>{4b3e1114-a99e-4b46-a429-1acd51300ece}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
