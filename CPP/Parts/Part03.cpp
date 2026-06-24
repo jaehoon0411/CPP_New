@@ -42,6 +42,7 @@ void Part03::Class()
 	cout << "player3 : " << player3.GetHP() << ", " << player3.GetATK() << '\n';
 
 	cout << '\n';
+
 }
 
 Player::Player(int id, int hp, int atk)
