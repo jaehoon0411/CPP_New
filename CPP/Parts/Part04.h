@@ -34,11 +34,37 @@ namespace Part04_Inheritance
 	};
 }
 
+
+namespace Part04_Polymorphism
+{
+	class Base 
+	{
+	public:
+		Base() { cout << "Base() 생성자 실행 완료!\n"; }
+		virtual ~Base() { cout << "~Base() 소멸자 실행 완료!\n"; }
+
+		virtual void ShowInfo();
+	};
+
+	class Derived : public Base
+	{
+		public:
+			Derived() { cout << "Derived() 생성자 실행 완료!\n"; }
+			~Derived() override { cout << "~Derived() 소멸자 실행 완료!\n"; }
+
+			void ShowInfo() override;
+	};
+}
+
 class Part04
 {
 public:
 	Part04();
 
 private:
+
 	void Inheritance();
+	void Polymorphism();
 };
+
+// 함수 호출은 보통 정적 다이닝이라고 한다
