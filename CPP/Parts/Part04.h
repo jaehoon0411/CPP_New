@@ -37,7 +37,7 @@ namespace Part04_Inheritance
 
 namespace Part04_Polymorphism
 {
-	class Base 
+	class Base
 	{
 	public:
 		Base() { cout << "Base() 생성자 실행 완료!\n"; }
@@ -48,11 +48,31 @@ namespace Part04_Polymorphism
 
 	class Derived : public Base
 	{
-		public:
-			Derived() { cout << "Derived() 생성자 실행 완료!\n"; }
-			~Derived() override { cout << "~Derived() 소멸자 실행 완료!\n"; }
+	public:
+		Derived() { cout << "Derived() 생성자 실행 완료!\n"; }
+		~Derived() override { cout << "~Derived() 소멸자 실행 완료!\n"; }
 
-			void ShowInfo() override;
+		void ShowInfo() override;
+	protected:
+		virtual void DoShowInfo() = 0;
+		// 순수 가상함수 - 가상함수테이블에 올라가는 가상함수는 맞으나 정의가 없다.
+			// 무엇을 실행해야 하는지 알수가 없다.
+			// 순수 가상함수를 한개라도 포함하는 클래스를 추상 클래스라고 부른다.
+			// 추상 클래스는 말 그대로 추상적인 클래스라는 것이라서 그 클래스로 객체를 생성할 수 없다.
+			// 상속받는 클래스의 기본적인 틀을 만들어 주고 상속받은 클래스에서 구현을 맡길때
+			// 인터페이스
+				// 
+	};
+
+	class SubDerived : public Derived
+	{
+	public:
+		SubDerived() { cout << "SubDerived() 생성자 실행 완료!\n"; }
+		~SubDerived() override { cout << "~SubDerived() 소멸자 실행 완료!\n"; }
+
+	private:
+		int val = 0;
+
 	};
 }
 
