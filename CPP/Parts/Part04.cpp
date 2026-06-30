@@ -74,7 +74,6 @@ void Part04::Polymorphism()
 	cout << '\n';
 	SAFE_DELETE(base1);
 	cout << '\n';
-
 }
 
 namespace Part04_Inheritance
