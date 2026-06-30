@@ -22,25 +22,10 @@ void Part04::Inheritance()
 	derived.PrintInfo();
 	cout << '\n';
 
-	// 업케스팅
-		// 케스팅 -- 형변환
-		// 파생 클래스 포인터를 기반 클래스 포인터로 형변환 하는것을 업케스팅
-		// 업이란 것은 상속 관계에서의 업이란 것
-		// new Derived = Derived*이기에 Base로 받을 때 실행되는 것을 업케스팅이라고 한다
-		// 묵시적 형변환 - 형변환을 명시하지 않았지만 컴파일러가 형변환을 할때
-			// 값이 소실될수 있음
-		// Derived는 Base를 포함하고 있기에 Base*로 하여도 너무나도 당연하게 가능한 형변환이다.
-	
-	// baseDerived는 Derived의 객체이기에 사람의 입장에서는 Derived의 PrintInfo이기를 바람
-		// 상속이 다양하게 많은 종류로 일어날수 있다.
-			// 종류별로 다 따로 하기 힘듬
-	
-	// 
 	Base* baseDerived = new Derived(20, 6.28f, "Hello!");
 	cout << '\n';
 	baseDerived->PrintInfo();
 	cout << '\n';
-
 	SAFE_DELETE(baseDerived);
 	cout << '\n';
 }
@@ -48,7 +33,6 @@ void Part04::Inheritance()
 // virtual - 가상 함수
 	// Base의 ShowInfo를 가상함수로 선언하고 Derived에서 그 가상 함수를 override라고 표현한다
 	// 이게 어떻게 가능하냐?
-		// 
 		// 동적 다형성
 			// 함수 바인딩
 				// 컴파일러가 보통은 함수호출에 무엇을 묶어주는 것, 보통은 정적 바인딩이다.
@@ -56,7 +40,20 @@ void Part04::Inheritance()
 	// override가 무엇이냐?
 		// 재정의, 즉 함수를 다시 정의한다
 	// 구현 원리 - 가상함수 포인터, 가상함수 테이블
-		// 
+// 업케스팅
+	// 케스팅 -- 형변환
+	// 파생 클래스 포인터를 기반 클래스 포인터로 형변환 하는것을 업케스팅
+	// 업이란 것은 상속 관계에서의 업이란 것
+	// new Derived = Derived*이기에 Base로 받을 때 실행되는 것을 업케스팅이라고 한다
+		// 묵시적 형변환 - 형변환을 명시하지 않았지만 컴파일러가 형변환을 할때
+		// 값이 소실될수 있음
+	// Derived는 Base를 포함하고 있기에 Base*로 하여도 너무나도 당연하게 가능한 형변환이다.
+
+	// baseDerived는 Derived의 객체이기에 사람의 입장에서는 Derived의 PrintInfo이기를 바람
+		// 상속이 다양하게 많은 종류로 일어날수 있다.
+			// 종류별로 다 따로 하기 힘듬
+
+	// 
 void Part04::Polymorphism()
 {
 	using namespace Part04_Polymorphism;
